@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     const fetchItems= async ()=>{
       const result = await axios(`https://www.breakingbadapi.com/api/characters?name=${getInput}`)
-      console.log(result.data)
+      /*console.log(result.data)*/
       setItems(result.data)
       setLoading(false)
     };

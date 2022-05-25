@@ -6,12 +6,15 @@ const SearchBox = ({getQuery}) => {
     const changeHandler = (q) => {
         setSearch(q)
         getQuery(q)
-        console.log(q)
+       /* console.log(q)*/
+    }
+    const HandleSubmit = (e) => {
+      e.preventDefault();
     }
 
   return (
     <div className='search'>
-        <form action="">
+        <form action="" onSubmit={HandleSubmit}>
         <input type="text" 
         value={search}
         className='form-control'
